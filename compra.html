@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Código de compra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="boxCompra">
+        <h1>Código:</h1>
+        <h2 id="codigo-gerado"></h2>
+        <p>Apresente este código na cantina da escola e retire seu pedido</p>
+        <div class="boxLinks">
+          <span class="link1"><a href="feedback.html">Avalie</a></span>
+          <span class="link2"><a href="vendas.html">Voltar</a></span>
+        </div>
+    </div>
+
+  <script>
+    function gerarCodigoAleatorio(tamanho) {
+      const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let codigo = '';
+
+      for (let i = 0; i < tamanho; i++) {
+        const indiceAleatorio = Math.floor(Math.random() * caracteres.length);
+        codigo += caracteres.charAt(indiceAleatorio);
+      }
+
+      return codigo;
+    }
+
+    // Gerar código e exibir no elemento <p> com id "codigo-gerado"
+    document.getElementById("codigo-gerado").textContent = gerarCodigoAleatorio(10); // Código de 10 caracteres
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <span class="bt_voltar"><a href="cardapio.html">Voltar</a></span>
+        <button id="menuButton" onclick="toggleMenu()">☰</button>
+        <nav id="menu">
+            <ul>
+                <li><a href="vendas.html">Vendas</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="#">Sua conta</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <div class="boxAval">
+        <h2>Avalie as comidas do cardápio:</h2>
+        <select class="SelComidas" name="comidas" multiple>
+            <option value="c1">Bife</option>
+            <option value="c2">Bolo</option>
+            <option value="c3">Torta</option>
+            <option value="c4">Arroz</option>
+            <option value="c5">Sopa</option>
+            <option value="c6">Pizza</option>
+            <option value="c7">Pudim</option>
+            <option value="c8">Macarrão</option>
+            <option value="c9">Hamburguer</option>
+            <option value="c10">Salada de Tomates</option>
+          </select>    
+        <div class="avaliacao-container">
+            <div class="estrelas" data-rating="avaliacao1">
+                <span data-value="1">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="5">&#9733;</span>
+            </div>
+            <p class="aviso">Avaliação: <span id="rating-avaliacao1">0</span>/5</p>
+        </div>
+        <textarea class="obs" placeholder="Deixe seu feedback aqui..."></textarea>
+        <br>
+        <h2>Avalie os lanches da cantina:</h2>
+        <select class="SelComidas" name="vendas" multiple>
+            <option value="v1">Coxinha de Frango</option>
+            <option value="v2">Coxinha de Frango com Catupiry</option>
+            <option value="v3">Coxinha de Costela</option>
+            <option value="v4">Coxinha de Calabresa</option>
+            <option value="v5">Coxinha Doce</option>
+            <option value="v6">Pastel de Carne</option>
+            <option value="v7">Pastel de Queijo</option>
+            <option value="v8">Pastel de Frango com Catupiry</option>
+            <option value="v9">Pastel de Calabresa</option>
+            <option value="v10">Pastel de Chocolate</option>
+            <option value="v11">Coca-Cola</option>
+            <option value="v12">Pepsi</option>
+            <option value="v13">Sprite</option>
+            <option value="v14">Fanta Laranja</option>
+            <option value="v15">Fanta Uva</option>
+            <option value="v16">Pirulito Blong</option>
+            <option value="v17">Bala Halls</option>
+            <option value="v18">Chiclete Trident</option>
+            <option value="v19">Bala de Goma</option>
+            <option value="v20">Chocolate lacta</option>
+        </select>
+        <div class="avaliacao-container">
+            <div class="estrelas" data-rating="avaliacao2">
+                <span data-value="1">&#9733;</span>
+                <span data-value="2">&#9733;</span>
+                <span data-value="3">&#9733;</span>
+                <span data-value="4">&#9733;</span>
+                <span data-value="5">&#9733;</span>
+            </div>
+            <p class="aviso">Avaliação: <span id="rating-avaliacao2">0</span>/5</p>
+        </div>
+        <textarea class="obs" placeholder="Deixe seu feedback aqui..."></textarea>
+        <br>
+        <button class="bt_enviar" onclick="window.location.href='cardapio.html'">Enviar</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
